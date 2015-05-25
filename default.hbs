@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <!--[if lte IE 8]><script src="{{asset "css/ie/html5shiv.js"}}"></script><![endif]-->
+    <script src="{{asset "js/jquery.min.js"}}"></script>
+    <script src="{{asset "js/skel.min.js"}}"></script>
+    <script src="{{asset "js/skel-layers.min.js"}}"></script>
+    <script src="{{asset "js/init.js"}}"></script>
+    <link rel="stylesheet" href="{{asset "css/skel.css"}}" />
+    <link rel="stylesheet" href="{{asset "css/style.css"}}" />
+    <link rel="stylesheet" href="{{asset "css/style-xlarge.css"}}" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{asset "css/ie/v8.css"}}" /><![endif]-->
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+    <div class="site-wrapper">
+
+        {{! Everything else gets inserted here }}
+        {{{body}}}
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <section class="4u 6u(medium) 12u$(small)">
+                        <h3>Mail</h3>
+                        <ul class="alt">
+                            <li>
+                                <a href="mailto:username@domain.ext" target="_blank">username@domain.ext</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="4u 6u$(medium) 12u$(small)">
+                        <h3>Address</h3>
+                        <ul class="alt">
+                            <li>
+                                Earth
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="4u$ 12u$(medium) 12u$(small)">
+                        <h3>Social</h3>
+                        <ul class="icons">
+                            <li><a href="#" class="icon rounded fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon rounded fa-facebook"><span class="label">Facebook</span></a></li>
+                            <li><a href="#" class="icon rounded fa-pinterest"><span class="label">Pinterest</span></a></li>
+                            <li><a href="#" class="icon rounded fa-google-plus"><span class="label">Google+</span></a></li>
+                            <li><a href="#" class="icon rounded fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+                    </section>
+                </div>
+                <ul class="copyright">
+                    <li><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</li>
+                    <li><a href="https://yourdomain.com">Your Name</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+</body>
+</html>

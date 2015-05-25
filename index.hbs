@@ -1,0 +1,51 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+<header id="header" class="{{#if @blog.cover}}">
+    <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+    {{navigation}}
+</header>
+
+<!-- Banner -->
+<section id="banner" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <h2>{{@blog.description}}</h2>
+</section>
+
+<!-- One -->
+<section id="one" class="wrapper style1 align-center">
+    <div class="container">
+        <header>
+            <h2>Consectetur adipisicing elit</h2>
+            <p>Lorem ipsum dolor sit amet adipisicing elit. Delectus consequatur sed tempus.</p>
+        </header>
+        <div class="row 200%">
+            <section class="4u 12u$(small)">
+                <i class="icon big rounded fa-clock-o"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quam consectetur quibusdam magni minus aut modi aliquid.</p>
+            </section>
+            <section class="4u 12u$(small)">
+                <i class="icon big rounded fa-comments"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ullam consequatur repellat debitis maxime molestiae.</p>
+            </section>
+            <section class="4u$ 12u$(small)">
+                <i class="icon big rounded fa-user"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eaque eveniet, nesciunt molestias. Ipsam, voluptate vero.</p>
+            </section>
+        </div>
+    </div>
+</section>
+
+{{! The main content area on the homepage }}
+<section id="two" class="wrapper style2 align-center">
+    <div class="container">
+        <header>
+            <h2>Portfolio</h2>
+            <p>Recently finished projects.</p>
+        </header>
+        <div class="row">
+            {{! The tag below includes the post loop - partials/loop.hbs }}
+            {{> "loop"}}
+        </div>
+    </div>
+</section>

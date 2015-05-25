@@ -1,0 +1,11 @@
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+<section class="feature 6u 12u$(small) {{post_class}}">
+    <a href="{{url}}"><img class="image fit" src="{{image}}" alt="" /></a>
+    <h3 class="title"><a href="{{url}}">{{{title}}}</a></h3>
+    <p><p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p></p>
+</section>
+{{/foreach}}
+
+{{! Previous/next page links - displayed on every page }}
+{{> "pagination"}}

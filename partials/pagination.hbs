@@ -1,0 +1,14 @@
+<footer role="navigation">
+	<ul class="actions">
+		{{#if prev}}
+			<li>
+		        <a class="newer-posts button big" href="{{page_url prev}}">&larr; Previous</a>
+		    </li>
+	    {{/if}}
+	    {{#if next}}
+	    	<li>
+		        <a class="older-posts button big" href="{{page_url next}}">More &rarr;</a>
+		    </li>
+	    {{/if}}
+	</ul>
+</footer>
