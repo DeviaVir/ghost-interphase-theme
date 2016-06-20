@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
+    <style type="text/css">body.no-flash{visibility: hidden;}</style>
     <!--[if lte IE 8]><script src="{{asset "css/ie/html5shiv.js"}}"></script><![endif]-->
     <script src="{{asset "js/jquery.min.js"}}"></script>
     <script src="{{asset "js/skel.min.js"}}"></script>
@@ -30,7 +31,7 @@
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}}">
+<body class="{{body_class}} no-flash">
 
     <div class="site-wrapper">
 

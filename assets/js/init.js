@@ -72,7 +72,7 @@
 
 	$(function() {
 
-		// ...
+		setTimeout(function() {$('body').removeClass('no-flash');}, 500);
 
 	});
 
