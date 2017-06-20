@@ -1,4 +1,6 @@
 # ghost-interphase-theme
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/DeviaVir/ghost-interphase-theme.svg)](https://greenkeeper.io/)
 A ghost theme based off of [template.co/interphase](http://templated.co/interphase).
 
 ### Installation instructions
