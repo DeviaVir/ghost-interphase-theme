@@ -21,8 +21,8 @@
             <p><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}</p>
         </header>
 
-        {{#if image}}
-            <a href="#" class="image fit"><img src="{{image}}" alt="" /></a>
+        {{#if feature_image}}
+            <a href="#" class="image fit"><img src="{{img_url feature_image}}" alt="" /></a>
         {{/if}}
 
         {{content}}

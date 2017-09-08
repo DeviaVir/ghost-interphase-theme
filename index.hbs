@@ -2,13 +2,13 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! The big featured header }}
-<header id="header" class="{{#if @blog.cover}}">
+<header id="header" class="{{#if @blog.cover_image}}">
     <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
     {{navigation}}
 </header>
 
 <!-- Banner -->
-<section id="banner" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+<section id="banner" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
     <h2>{{@blog.description}}</h2>
 </section>
 
